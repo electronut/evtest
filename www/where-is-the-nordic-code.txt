@@ -1,0 +1,9 @@
+The folder with the nRF51-DK mbed source code is in the parent folder.
+
+
+nRF51_GATT_SERVICE:     6e524635-312d-444b-2020-202020202020
+nRF51_GATT_CHAR_BUTTON: 6e524635-312d-444b-2062-7574746f6e20
+nRF51_GATT_CHAR_LED:    6e524635-312d-444b-206c-656420202020
+
+
+https://api.thingspeak.com/update?api_key=IKYH9WWZLG5TVYF2&field1=75

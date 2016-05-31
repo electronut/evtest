@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<!--
+This is an example app that demonstrates how to communicate over BLE
+(Bluetooth Low Energy) to read button press status and control LED's.
+-->
+<head>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no,
+		shrink-to-fit=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+
+	<title>nRF51 HRM</title>
+
+	<style>
+		@import 'ui/css/evothings-app.css';
+	</style>
+
+	<script>
+	// Redirect console.log to Evothings Workbench.
+	if (window.hyper && window.hyper.log) { console.log = hyper.log }
+	</script>
+
+	<script src="cordova.js"></script>
+	<script src="libs/jquery/jquery.js"></script>
+	<script src="libs/evothings/evothings.js"></script>
+	<script src="libs/evothings/easyble/easyble.js"></script>
+	<script src="libs/evothings/ui/ui.js"></script>
+	<script src="libs/evothings/nordic-nRF51-ble/nordic-nRF51-ble.js"></script>
+  <script src="app.js"></script>
+</head>
+
+<body ontouchstart="">
+<!-- ontouchstart="" enables low-delay CSS transitions. -->
+
+	<header>
+		<button class="back" onclick="history.back()">
+			<img src="ui/images/arrow-left.svg" />
+		</button>
+
+		<img class="logotype" src="ui/images/logo.svg" alt="Evothings" />
+
+		<!--<button class="menu" onclick=""><img src="ui/images/menu.svg" /></button>-->
+	</header>
+
+	<h2 align="center" >nRF51 HRM</h2>
+
+	<img style=" display: block; margin:auto; padding: auto; text-align: center; max-height: 20%;" src="nRF51a.jpg"  />
+
+	<button id="button-connect" class="blue wide"
+		onclick="app.connectOrDisconnect()">CONNECT</button>
+
+	<br />
+
+	<p id="data">Not connected to nRF51</p>
+	<p id="hrm">0</p>
+	<p id="timer">?</p>
+
+	<h2>HRM(t)</h2>
+	<canvas id="canvas" width="600" height="200"></canvas>
+
+</body>
+</html>
